@@ -1,4 +1,4 @@
-console.log('client side javascript file is loaded')
+//console.log('client side javascript file is loaded')
 
 /*fetch('http://puzzle.mead.io/puzzle').then((response)=>{
    response.json().then((data)=>{
@@ -30,7 +30,7 @@ weatherform.addEventListener('submit',(e)=>
     const location=search.value
 
     mssg1.textContent="Loading..."
-    mssg2.textContent=""
+    mssg2.textContent="" //because of this code after submitting(location) 2nd time 2nd paragraph get clear
 
     fetch('http://localhost:3000/weather?address='+ location).then((response)=>{
   response.json().then((data)=>{
