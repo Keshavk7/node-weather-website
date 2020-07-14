@@ -1,5 +1,6 @@
 const path=require('path')
 const express=require('express')
+const port= process.env.PORT||3000
 
 //console.log(__dirname)
 //console.log(__filename)
@@ -121,6 +122,6 @@ app.get('*',(req,res)=>{ // * path shows default message to be displayed if none
 
 
 
-app.listen(3000,(req,res)=>{
-    console.log("server port 3000 started")
+app.listen(port,(req,res)=>{
+    console.log("server started on port" + port)
 })

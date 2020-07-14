@@ -32,7 +32,8 @@ weatherform.addEventListener('submit',(e)=>
     mssg1.textContent="Loading..."
     mssg2.textContent="" //because of this code after submitting(location) 2nd time 2nd paragraph get clear
 
-    fetch('http://localhost:3000/weather?address='+ location).then((response)=>{
+   // fetch('http://localhost:3000/weather?address='+ location).then((response)=>{
+    fetch('/weather?address='+ location).then((response)=>{  //SetUp for Heroku
   response.json().then((data)=>{
       if(data.error){
           mssg1.textContent=data.error
